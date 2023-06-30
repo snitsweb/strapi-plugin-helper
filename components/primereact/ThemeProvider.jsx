@@ -5,7 +5,7 @@ import { LightThemeProvider } from './LightThemeProvider';
 import 'primereact/resources/primereact.min.css';
 
 export const ThemeProvider = ({ children }) => {
-  const [theme] = getCurrentTheme();
+  const theme = getCurrentTheme();
 
   return (
     theme === 'dark'

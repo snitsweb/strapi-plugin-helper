@@ -1,3 +1,1 @@
-import { useSessionStorage } from 'primereact/hooks';
-
-export const getCurrentTheme = () => useSessionStorage('dark', 'STRAPI_THEME');
+export const getCurrentTheme = () => localStorage && localStorage.getItem('STRAPI_THEME');

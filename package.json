@@ -1,6 +1,6 @@
 {
   "name": "@snitsweb/strapi-plugin-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "snitsweb-strapi-helper",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snitsweb/strapi-plugin-countries-select"
+    "url": "https://github.com/snitsweb/strapi-plugin-helper"
   },
   "keywords": [
     "strapi",
@@ -20,12 +20,9 @@
     "strapi-cms",
     "strapi4"
   ],
-  "dependencies": {
-    "primereact": "^9.6.0",
-    "react-helmet": "^6.1.0"
-  },
   "peerDependencies": {
-    "@strapi/strapi": "^4.0.0"
+    "@strapi/strapi": "^4.0.0",
+    "primereact": "^9.6.0"
   },
   "author": {
     "name": "Oleksandr Snitsaruk",
