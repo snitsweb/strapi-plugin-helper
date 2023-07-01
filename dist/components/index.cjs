@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./primereact/ThemeProvider.cjs"),r=require("./primereact/DarkThemeProvider.cjs"),i=require("./primereact/LightThemeProvider.cjs");exports.ThemeProvider=e.ThemeProvider;exports.DarkThemeProvider=r.DarkThemeProvider;exports.LightThemeProvider=i.LightThemeProvider;
