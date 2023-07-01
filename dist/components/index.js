@@ -1,8 +1,8 @@
-import { ThemeProvider as o } from "./primereact/ThemeProvider.js";
-import { DarkThemeProvider as h } from "./primereact/DarkThemeProvider.js";
-import { LightThemeProvider as t } from "./primereact/LightThemeProvider.js";
+import { ThemeProvider as m } from "./primereact/ThemeProvider.js";
+import { DarkThemeProvider as i } from "./primereact/DarkThemeProvider.js";
+import { LightThemeProvider as a } from "./primereact/LightThemeProvider.js";
 export {
-  h as DarkThemeProvider,
-  t as LightThemeProvider,
-  o as ThemeProvider
+  i as PrimereactDarkThemeProvider,
+  a as PrimereactLightThemeProvider,
+  m as PrimereactThemeProvider
 };

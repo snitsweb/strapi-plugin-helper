@@ -2,6 +2,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 import glob from 'tiny-glob';
+import dts from 'vite-plugin-dts';
+import typescript from '@rollup/plugin-typescript';
 
 export default defineConfig(async () => {
   const componentPaths = await glob('./components/**/*.{js,js,svg,ts,tsx}');
@@ -10,14 +12,14 @@ export default defineConfig(async () => {
   return {
     esbuild: {
       loader: 'jsx',
-      include: /components\/[^\/]+\/[^\/]+\.jsx/,
+      include: /components\/[^\/]+\/[^\/]+\.{jsx|js|ts|tsx}/,
       exclude: [],
     },
     build: {
       emptyOutDir: false,
       target: 'esnext',
       lib: {
-        entry: {},
+        entry: path.resolve(__dirname, 'components/index.ts'),
         formats: ['cjs', 'es'],
         fileName(format) {
           return `[name].${format === 'es' ? 'js' : format}`;
@@ -25,7 +27,7 @@ export default defineConfig(async () => {
       },
       rollupOptions: {
         input: [
-          path.resolve(__dirname, 'components/index.js'),
+          path.resolve(__dirname, 'components/index.ts'),
           ...componentPaths.map((path) => `./${path}`),
           ...utilPaths.map((path) => `./${path}`),
         ],
@@ -37,8 +39,9 @@ export default defineConfig(async () => {
           preserveModules: true,
           interop: 'auto',
         },
+        plugins: [typescript()],
       },
     },
-    plugins: [react()],
+    plugins: [react(), dts()],
   };
 });

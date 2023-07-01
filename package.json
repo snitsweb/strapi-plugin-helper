@@ -1,6 +1,6 @@
 {
   "name": "@snitsweb/strapi-plugin-helper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "snitsweb-strapi-helper",
@@ -42,9 +42,11 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
     "@vitejs/plugin-react": "^4.0.1",
     "tiny-glob": "^0.2.9",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^3.0.2"
   },
   "scripts": {
     "build": "vite build"
