@@ -17,6 +17,8 @@
     "jsx": "react-jsx",
     "types": ["vite/client"],
     "baseUrl": ".",
+    "declaration": true,
+    "outDir": "dist"
   },
   "references": [
     {
